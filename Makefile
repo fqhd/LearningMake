@@ -1,13 +1,13 @@
 CXX := clang++
 CFLAGS := -c $(pkg-config --cflags sfml)
 LFLAGS := $(pkg-config --libs sfml)
-SHOW_LABELS := @
+SHOW_COMMANDS := @
 
 all: main
-	${SHOW_LABELS} ${CXX} ${LFLAGS} main.o -o out
+	${SHOW_COMMANDS} ${CXX} ${LFLAGS} main.o -o out
 
 main: main.cpp
-	${SHOW_LABELS} ${CXX} ${CFLAGS} main.cpp -o main.o
+	${SHOW_COMMANDS} ${CXX} ${CFLAGS} main.cpp -o main.o
 
 clean:
 	@echo "Cleaning..."
